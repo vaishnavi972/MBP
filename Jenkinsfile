@@ -8,8 +8,4 @@ node('master')
     {
        sh 'mvn package'
     }
-    stage('ContinuousDeployment') 
-    {
-       sh 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war ubuntu@172.31.30.8:/var/lib/tomcat8/webapps/testapp.war'
-    }
 }
